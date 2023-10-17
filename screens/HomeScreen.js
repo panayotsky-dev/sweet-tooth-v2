@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/core';
 import { StatusBar } from 'expo-status-bar';
 
 import React, { useLayoutEffect } from 'react'
-import {  Image, Text, TextInput, View } from 'react-native';
+import {  Image, ScrollView, Text, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { UserIcon,ChevronDownIcon,AdjustmentsHorizontalIcon,AdjustmentsVerticalIcon,MagnifyingGlassIcon} from 'react-native-heroicons/outline'
 
@@ -47,6 +47,11 @@ function HomeScreen() {
         </View>
         <AdjustmentsVerticalIcon size={20} color="#00CCBB" />
       </View>
+
+      <ScrollView>
+      {/* Categories */}
+      {/* Featured Rows */}
+      </ScrollView>
     </SafeAreaView>
   );
 }
