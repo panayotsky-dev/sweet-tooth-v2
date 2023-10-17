@@ -5,10 +5,16 @@ import React, { useLayoutEffect } from 'react'
 import {  Image, ScrollView, Text, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { UserIcon,ChevronDownIcon,AdjustmentsHorizontalIcon,AdjustmentsVerticalIcon,MagnifyingGlassIcon} from 'react-native-heroicons/outline'
+import Categories from '../components/Categories';
+import FeaturedDeals from '../components/FeaturedDeals';
 
 
 
 function HomeScreen() {
+  const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  const getDay = new Date().getDay();
+  const today = dayNames[getDay]
+  const deals = ' Discounts'
     const navigation = useNavigation();
 
 
@@ -48,9 +54,24 @@ function HomeScreen() {
         <AdjustmentsVerticalIcon size={20} color="#00CCBB" />
       </View>
 
-      <ScrollView>
+      <ScrollView className="bg-gray-200">
       {/* Categories */}
-      {/* Featured Rows */}
+      <Categories />
+      {/* Todays Deals */}
+      <FeaturedDeals
+      id={1}
+      title={today + deals}
+      description="Money don't jiggle jiggle" />
+          {/* Special Packages  */}
+      <FeaturedDeals
+      id={2}
+      title='Special packages'
+      description="Money don't jiggle jiggle" />
+
+      <FeaturedDeals
+      id={3}
+      title='Title is not found'
+      description="Money don't jiggle jiggle" />
       </ScrollView>
     </SafeAreaView>
   );
