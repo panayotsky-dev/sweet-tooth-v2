@@ -54,11 +54,11 @@ function HomeScreen() {
         <AdjustmentsVerticalIcon size={20} color="#00CCBB" />
       </View>
 
-      <ScrollView className="bg-gray-200">
+      <ScrollView className="bg-gray-200 ">
       {/* Categories */}
       <Categories />
       {/* Todays Deals */}
-      <FeaturedDeals
+      <FeaturedDeals 
       id={1}
       title={today + deals}
       description="Money don't jiggle jiggle" />

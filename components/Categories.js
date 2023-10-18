@@ -4,7 +4,7 @@ import CategoriesCard from './CategoriesCard'
 
 const Categories = () => {
   return (
-    <ScrollView
+    <ScrollView 
     contentContainerStyle={{
         paddingHorizontal:20,
         paddingTop:10,
